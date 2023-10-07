@@ -1,0 +1,70 @@
+h1 {
+    /* Text color */
+    color: #0000FF;  /* Blue color */
+
+    /* Background color */
+    background-color: #FFFDD0;  /* Cream color */
+
+    /* Text styling to make it pop */
+    font-size: 2.5em;  /* Adjust size as needed */
+    font-weight: bold;
+    padding: 20px;  /* Add space around the text for better visuals */
+    border-radius: 10px;  /* Rounded corners for aesthetics */
+
+    /* Optional: center the text */
+    text-align: center;
+
+    /* Optional: Shadow for added depth (can adjust or remove) */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+
+    /* Optional: add a max-width and margin to center the h1 element on the page */
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+/* Optional: If you want to reset the margins on the body to ensure the h1 stands out even more */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;  /* You can set this to your preferred font */
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Ensures the entire viewport is occupied */
+}
+
+.immersive-container {
+    position: relative;
+    height: 100%;
+    background: linear-gradient(to right, #FFFDD0, #e3ff4300); /* Gradient background for immersive feel */
+
+    /* Optional: Add a subtle animation to the gradient for extra immersion */
+    animation: GradientShift 1s infinite alternate;
+}
+
+.dog-image {
+    max-width: 100%; /* Ensures the image never exceeds the viewport's width */
+    display: block;
+    margin: auto; /* Centers the image vertically and horizontally */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4); /* Adds a shadow for depth */
+    width: 10%; /* Reduce to half of original width */
+    height: auto; /* This will maintain the aspect ratio */
+}
+
+  
+
+/* Optional gradient shift animation for added immersion */
+@keyframes GradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
