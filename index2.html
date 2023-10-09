@@ -30,8 +30,8 @@
 <body>
     <h1>
         Good job, <span class="underline">you caught the dog.</span> <a href=".\StartGame.html">Try again?</a>
+        High Score: <span id="highScore">0</span>
     </h1>
-    <h2>High Score: <span id="highScore">0</span></h2>
     <script>
         document.getElementById('highScore').textContent = localStorage.getItem('highScore') || '0';
     </script>

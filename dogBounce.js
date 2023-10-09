@@ -3,19 +3,30 @@ document.addEventListener('DOMContentLoaded', function() {
     let gameInterval;
 
     function createDogImage() {
-        for (let i = 0; i < 2; i++) { // Create two dog images for every click
+        for (let i = 0; i < 2; i++) {
             const dogImage = document.createElement('img');
-            dogImage.src = ".\\appphotos\\dogphoto.jpg";
+            
+            // 20% chance to spawn dogphoto2.jpg
+            if (Math.random() < 0.2) {
+                dogImage.src = ".\\appphotos\\dogphoto2.jpg";
+                dogImage.addEventListener('click', function() {
+                    score += 5;
+                    updateScore();
+                    createDogImage();
+                    dogImage.remove();
+                });
+            } else {
+                dogImage.src = ".\\appphotos\\dogphoto.jpg";
+                dogImage.addEventListener('click', function() {
+                    score++;
+                    updateScore();
+                    createDogImage();
+                    dogImage.remove();
+                });
+            }
+            
             dogImage.alt = "Dog!";
             dogImage.classList.add('dog-image');
-
-            dogImage.addEventListener('click', function() {
-                score++;
-                updateScore();
-                createDogImage();  // Create two more dog images
-                dogImage.remove();  // Remove the clicked dog image
-            });
-
             document.querySelector('.immersive-container').appendChild(dogImage);
             moveDogImage(dogImage); // Immediately place the dog image at a random position
         }

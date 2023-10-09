@@ -15,3 +15,13 @@ Find, and click (Catch) the picture of the dog
 This picture will link you to index2.html
 
 Here, you may click "Try Again," which links you back to StartGame.html
+
+
+
+---Updates---
+
+V1.1    10/8/2023
+        The dogphoto is no longer a win condition. Now, the dog photo splits into two with every "catch,"
+        and you earn a point for every dog caught.
+
+        High score feature added
